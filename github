@@ -1,0 +1,5 @@
+# Close all programs (VS Code, terminals, etc.)
+Remove-Item -Recurse -Force node_modules, package-lock.json, .pnp.cjs, pnpm-lock.yaml, yarn.lock -ErrorAction SilentlyContinue
+
+
+npm cache clean --force

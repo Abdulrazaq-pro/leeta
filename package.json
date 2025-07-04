@@ -1,0 +1,49 @@
+{
+  "name": "wtf",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@heroicons/react": "^2.2.0",
+    "@radix-ui/react-accordion": "^1.2.11",
+    "@radix-ui/react-collapsible": "^1.1.11",
+    "@radix-ui/react-scroll-area": "^1.2.3",
+    "@radix-ui/react-slot": "^1.1.2",
+    "@radix-ui/react-tabs": "^1.1.9",
+    "@radix-ui/react-tooltip": "^1.1.8",
+    "animejs": "^4.0.2",
+    "axios": "^1.8.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "gsap": "^3.13.0",
+    "lenis": "^1.3.3",
+    "lucide-react": "^0.479.0",
+    "motion": "^12.9.4",
+    "next": "15.2.2",
+    "nodemailer": "^7.0.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-fittext": "^1.0.0",
+    "react-icons": "^5.5.0",
+    "react-social-login-buttons": "^4.1.1",
+    "react-textfit": "^1.1.1",
+    "shadcn": "2.5.0",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.2",
+    "tailwindcss": "^4",
+    "tw-animate-css": "^1.2.9"
+  },
+  "packageManager": "pnpm@10.6.3+sha512.bb45e34d50a9a76e858a95837301bfb6bd6d35aea2c5d52094fa497a467c43f5c440103ce2511e9e0a2f89c3d6071baac3358fc68ac6fb75e2ceb3d2736065e6"
+}
