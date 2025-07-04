@@ -14,13 +14,13 @@ const Hero = () => {
   const downloadButtons = [
     {
       id: 1,
-      icon: "▶",
+      icon: "",
       text: "Download on Google Play",
       platform: "android",
     },
     {
       id: 2,
-      icon: "🍎",
+      icon: "",
       text: "Download on App Store",
       platform: "ios",
     },

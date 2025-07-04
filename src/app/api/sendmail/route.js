@@ -12,7 +12,8 @@ export async function POST(req) {
       },
     });
 
-    const mailOptions = {
+    // Email to the user who joined the waiting list
+    const userMailOptions = {
       from: `"Leeta Gas Services" <${
         process.env.EMAIL_USER || "noreply@leetagas.com"
       }>`,
@@ -59,7 +60,28 @@ export async function POST(req) {
       `,
     };
 
-    await transporter.sendMail(mailOptions);
+    // Email to admin (abdulrazmail@gmail.com)
+    const adminMailOptions = {
+      from: `"Leeta Gas Services" <${
+        process.env.EMAIL_USER || "noreply@leetagas.com"
+      }>`,
+      to: "abdulrazmail@gmail.com",
+      subject: `New Waitlist Signup: ${email}`,
+      text: `${email} just received a notification of joining the waitlist.`,
+      html: `
+        <div style="font-family: 'Segoe UI', Arial, sans-serif; padding: 20px;">
+          <h2 style="color: #FD671E;">New Waitlist Signup</h2>
+          <p>The following email address has been added to the waitlist:</p>
+          <p style="font-weight: bold; font-size: 18px;">${email}</p>
+          <p style="margin-top: 30px; color: #666; font-size: 14px;">This is an automated notification from Leeta Gas Services.</p>
+        </div>
+      `,
+    };
+
+    // Send both emails
+    await transporter.sendMail(userMailOptions);
+    await transporter.sendMail(adminMailOptions);
+
     return new Response(
       JSON.stringify({
         message: "Waiting list confirmation sent successfully",
